@@ -61,6 +61,27 @@ nav a:hover::after{
     width:110%;
 }
 
+.section-container{
+    display:flex;
+    border: 1px solid black;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section-title{
+    font-family:'Raleway', sans-serif;
+    font-weight:500;
+    color: #8b6c06;
+}
+.section-title::before{
+    content:"R";
+    font-family: 'Raleway', sans-serif ;
+    font-weight: 500;
+    color: #a18014;
+    font-size:35px;
+}
+
 
 button.button{
     border: none;
@@ -79,5 +100,5 @@ button.button{
 }
 
 img{
-    width: 100px;
+    width: 50px;
 }
