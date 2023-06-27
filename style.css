@@ -2,13 +2,82 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@font-face {
+    font-family: "font-logo";
+    src: url("arquivos/fontes/romantic_couple/Romantic\ Couple.ttf") format("truetype");
+  }
+  
+*{
+    box-sizing: border-box;
+    margin:0 ;
+    padding:0;
+    text-decoration: none;
+}
+
 /*font-family: 'Playfair Display', serif;
 font-family: 'Raleway', sans-serif;*/
-Body{
-background-image:linear-gradient(to right, #E5A895 0%, 20.942407846450806%, #EBCFC1 41.88481569290161%, 70.9424078464508%, #945A4E 100%);
 
+
+main.container{
+background-image:linear-gradient(to right, #E5A895 0%, 20.942407846450806%, #EBCFC1 41.88481569290161%, 70.9424078464508%, #be867a 100%);
 }
-h1{
-    font-family:'Playfair Display', serif ;
-    text-align:center;
+header.header-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+h1.page-title{
+    font-family:'font-logo', serif ;
+    font-size: 50px;
+    font-weight:700;
+    color: #9c8129;
+}
+nav>a.menu-link{
+    margin-right: 50px;
+    color: #8b6c06;
+    font-family:'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+nav a{
+    position: relative;
+}
+nav a::after{
+    content:'';
+    width: 0%;
+    height:1.5px;
+    background-color: #a18014;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+nav a:hover::after{
+
+    width:110%;
+}
+
+
+button.button{
+    border: none;
+    font-size: 16px;
+    display: flex;
+    padding: 15px;
+    height: 40px;
+    width: 125px;
+    border-radius:8px;
+    justify-content: center;
+    align-items: center;
+    font-family:'Raleway', sans-serif;
+    color: #8b6c06;
+    font-family:'Raleway', sans-serif;
+    font-weight:700;
+}
+
+img{
+    width: 100px;
 }
