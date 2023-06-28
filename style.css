@@ -75,7 +75,10 @@ nav a:hover::after{
 
 /*Inicio style main*/
 main.container{
-    display:flex;
+    display: flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: space-around;
     flex-direction:row;
     justify-content: space-around;
     align-items: center;
@@ -83,28 +86,30 @@ main.container{
 /*Final style main*/
 
 /*Title Realce sua beleza*/
-section.section-container .line1{
+
+
+.line1{
     font-family:var(--cor-text);
     font-weight:500;
     color: var(--cor-text);
     text-align: center;
     margin-bottom:-3px;
 }
-section.section-container .line1::before{
+ .line1::before{
     content:"R";
     font-family: var(--cor-text) ;
     font-weight: 400;
     color: var(--cor-logo);
     font-size:35px;
 }
-section.section-container .line2{
+.section-container .line2{
     font-family:var(--cor-text);
     font-weight:500;
     color: var(--cor-text);
 }
 /*Final section*/
 
-/*imagems principais*/
+/*imagem principais*/
 figure.container-img {
     width:50vw;
     height: 55vh;
@@ -116,10 +121,29 @@ figure.container-img {
   
 .img-3{
   max-width:100%;
-  height: auto;
   }
-  
-  
+  /*Final style img*/
+
+ /*inicio text*/
+   aside{
+    border:1px solid var(--cor-text);
+    height:15vh;
+    width: 30vw;
+    font-family:var(--cor-text);
+    font-size:18px;
+    margin-left:30px ;
+    overflow: hidden;
+    margin: auto;
+   }
+
+   .section-description{
+
+   }
+
+
+
+
+
 /*Inicio style redes socias*/
 ul.container-ul{
     display:flex;
