@@ -1,5 +1,5 @@
+/*Inicio configurções Gerais*/
 @charset "utf-08";
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @font-face {
@@ -13,34 +13,46 @@
     padding:0;
     text-decoration: none;
 }
-
-/*font-family: 'Playfair Display', serif;
-font-family: 'Raleway', sans-serif;*/
-
-
-main.container{
-background-image:linear-gradient(to right, #E5A895 0%, 20.942407846450806%, #EBCFC1 41.88481569290161%, 70.9424078464508%, #be867a 100%);
+:root{
+    --cor-1:#ebe8e7;
+    --cor-2:#EBCFC1;
+    --cor-3:#be867a;
+    --cor-logo:#9c8129;
+    --cor-text: #8b6c06;
+    --cor-content:#a18014;
+    --font-logo:'font-logo', serif;
+    --font-text:'Raleway', sans-serif;
 }
+/*Final configurações Gerais*/
+
+/*Inicio style corpo*/
+body{
+background-image:linear-gradient(to right, var(--cor-1) 0%, 20.942407846450806%, var(--cor-2) 41.88481569290161%, 70.9424078464508%, var(--cor-3) 100%);
+position: relative;
+}
+/*Final style corpo*/
+
+/*Inicio style header*/
 header.header-container{
     display: flex;
+    border-bottom: 1px solid var(--cor-text);
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
 }
 h1.page-title{
-    font-family:'font-logo', serif ;
+    font-family:var(--font-logo) ;
     font-size: 50px;
     font-weight:700;
-    color: #9c8129;
+    color: var(--cor-logo);
 }
 nav>a.menu-link{
     margin-right: 50px;
-    color: #8b6c06;
-    font-family:'Raleway', sans-serif;
+    color: var(--cor-text);
+    font-family:var(--font-text);
     font-weight: 500;
 }
-
 nav a{
     position: relative;
 }
@@ -48,40 +60,80 @@ nav a::after{
     content:'';
     width: 0%;
     height:1.5px;
-    background-color: #a18014;
+    background-color: var(--cor-content);
     position: absolute;
     bottom: 0;
     left:0;
     transition-duration: 0.4s;
     transition-timing-function: ease-in-out;
 }
-
 nav a:hover::after{
 
     width:110%;
 }
+/*Final style header*/
 
-.section-container{
+/*Inicio style main*/
+main.container{
     display:flex;
-    border: 1px solid black;
-    flex-direction: row;
+    flex-direction:row;
     justify-content: space-around;
     align-items: center;
 }
+/*Final style main*/
 
-.section-title{
-    font-family:'Raleway', sans-serif;
+/*Title Realce sua beleza*/
+section.section-container .line1{
+    font-family:var(--cor-text);
     font-weight:500;
-    color: #8b6c06;
+    color: var(--cor-text);
+    text-align: center;
+    margin-bottom:-3px;
 }
-.section-title::before{
+section.section-container .line1::before{
     content:"R";
-    font-family: 'Raleway', sans-serif ;
-    font-weight: 500;
-    color: #a18014;
+    font-family: var(--cor-text) ;
+    font-weight: 400;
+    color: var(--cor-logo);
     font-size:35px;
 }
+section.section-container .line2{
+    font-family:var(--cor-text);
+    font-weight:500;
+    color: var(--cor-text);
+}
+/*Final section*/
 
+/*imagems principais*/
+figure.container-img {
+    width:50vw;
+    height: 55vh;
+    display: flex ;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+  }
+  
+.img-3{
+  max-width:100%;
+  height: auto;
+  }
+  
+  
+/*Inicio style redes socias*/
+ul.container-ul{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+    list-style: none;
+    height: 85vh;
+    margin-top: 20px;
+}
+img.img-ul{
+    width:5vh;
+    height:auto;
+}
+/*Final style redes sociais*/
 
 button.button{
     border: none;
@@ -93,12 +145,7 @@ button.button{
     border-radius:8px;
     justify-content: center;
     align-items: center;
-    font-family:'Raleway', sans-serif;
-    color: #8b6c06;
-    font-family:'Raleway', sans-serif;
+    font-family:var(--cor-text);
+    color: var(--cor-text);
     font-weight:700;
-}
-
-img{
-    width: 50px;
 }
