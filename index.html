@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="arquivos/icon/icon-page.ico" type="image/x-icon">
     <meta name="description" content="Realce sua beleza natural com sobrancelhas perfeitamente moldadas. Descubra nossos serviços profissionais de design de sobrancelhas. Agende um horário e descubra a diferença que um design de sobrancelhas profissional pode fazer para a sua aparência.">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Ketlin appelt</title>
 </head>
 <body>
     <header id="header" class="header-container">
         <h1 class="page-title">Ketlin Appelt</h1>
-        <nav class="menu">
-            <a class="menu-link"   href="#">Sobre</a>
-            <a class="menu-link" href="#">Serviços</a>
-            <a class="menu-link" href="#">Depoimentos</a>
+        <div class="div-burge"><span class="material-icons" onclick="clickMenu()">menu</span></div>
+        <nav class="menu" id="itens"  class="menu clicked">
+            <a class="menu-link"  class="menu clicked"  href="#">Sobre</a>
+            <a class="menu-link"  class="menu clicked" href="#">Serviços</a>
+            <a class="menu-link"  class="menu clicked" href="#">Depoimentos</a>
+        </nav  class="menu clicked">
+        <nav class="menu" id="itens"  class="menu clicked">
+            <a class="menu-link"  class="menu clicked"  href="#">Reclamações</a>
         </nav>
-        <nav><a class="menu-link" href="#">Reclamações</a></nav>
     </header>
     <main  class="container">
         <section class="section-container">
@@ -42,5 +46,30 @@
             <li class="list-link"><a href="#"><img class="img-ul" src="arquivos/icon/IMG-20230628-WA0062-removebg-preview.png" target="_blank" rel="noopener noreferrer"></a></li>
         </ul>
     </footer>
+  
+    <script>
+       
+          function clickMenu() {
+        var menu = document.getElementById("itens");
+        var menuItems = menu.getElementsByClassName("menu-link");
+        var menuSeparado = document.getElementById("menu-link-separado");
+
+        if (menu.classList.contains("clicked")) {
+            menu.classList.remove("clicked");
+            menuSeparado.classList.remove("clicked");
+            for (var i = 0; i < menuItems.length; i++) {
+            menuItems[i].classList.remove("clicked");
+            }
+        } else {
+            menu.classList.add("clicked");
+            menuSeparado.classList.add("clicked");
+            for (var i = 0; i < menuItems.length; i++) {
+            menuItems[i].classList.add("clicked");
+            }
+        }
+}
+
+    </script>
+    
 </body>
 </html>
