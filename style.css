@@ -35,7 +35,6 @@ position: relative;
 /*Inicio style header*/
 header.header-container{
     display: flex;
-    border-bottom: 1px solid var(--cor-text);
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -82,6 +81,9 @@ main.container{
     flex-direction:row;
     justify-content: space-around;
     align-items: center;
+    border-top-style:groove;
+    border-bottom:groove ;
+    border-color:white;
 }
 /*Final style main*/
 
@@ -92,7 +94,6 @@ main.container{
     font-family:var(--cor-text);
     font-weight:500;
     color: var(--cor-text);
-    text-align: center;
     margin-bottom:-3px;
 }
  .line1::before{
@@ -106,8 +107,9 @@ main.container{
     font-family:var(--cor-text);
     font-weight:500;
     color: var(--cor-text);
+    margin-bottom:5vh;
+    margin-left: 5vh;
 }
-/*Final section*/
 
 /*imagem principais*/
 figure.container-img {
@@ -126,50 +128,67 @@ figure.container-img {
 
  /*inicio text*/
    aside{
-    border:1px solid var(--cor-text);
-    height:15vh;
+    height:auto;
+    text-align:justify;
     width: 30vw;
     font-family:var(--cor-text);
     font-size:18px;
-    margin-left:30px ;
-    overflow: hidden;
-    margin: auto;
    }
 
    .section-description{
-
+    line-height:1.5em;
+    color:#99780d;
    }
 
-
-
-
-
-/*Inicio style redes socias*/
-ul.container-ul{
-    display:flex;
-    flex-direction:column;
-    justify-content: space-between;
-    list-style: none;
-    height: 85vh;
-    margin-top: 20px;
-}
 img.img-ul{
     width:5vh;
     height:auto;
 }
 /*Final style redes sociais*/
 
+div.container-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    margin: auto;
+}
+
 button.button{
     border: none;
-    font-size: 16px;
+    font-size: 17px;
     display: flex;
     padding: 15px;
-    height: 40px;
-    width: 125px;
+    height:40px;
+    width:125px;
     border-radius:8px;
     justify-content: center;
     align-items: center;
     font-family:var(--cor-text);
-    color: var(--cor-text);
+    color:#a88308;
     font-weight:700;
+}
+
+.container-footer{
+    height: 50px;
+    width: 100%;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+
+}
+ul.container-ul{
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items: center;
+    gap:0px;
+    list-style: none;
+    align-items: center;
+    width:400px;
+}
+img.img-ul{
+    height:50px;
+    width: auto;
 }
