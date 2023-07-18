@@ -147,8 +147,6 @@ figure.container-img {
     text-align:justify;
     line-height:1.5em;
     color:#99780d;
-   
-
    }
 
 img.img-ul{
@@ -322,11 +320,12 @@ img.img-ul{
     }
     aside{
         margin: auto;
-        width:76vw;
+        width:300px;
+        padding: 10px;
     }
     .section-description{
         text-align: justify;
-        font-size: 16px;
+        font-size: 14px;
     }
     
     .container-img{
